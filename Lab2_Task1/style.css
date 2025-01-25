@@ -1,0 +1,92 @@
+/* Reset and Body Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+}
+
+/* Controls Section */
+.controls {
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 0 5px;
+  border: none;
+  background-color: #4caf50;
+  color: white;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+button:active {
+  background-color: #3d8b3d;
+}
+
+/* Animation Area */
+.animation-area {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  background-color: #ddd;
+  overflow: hidden;
+  border-radius: 10px;
+  border: 2px solid #ccc;
+}
+
+/* Square Styling */
+#square {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background-color: orange; /* Start color */
+  top: 0;
+  left: 0;
+  animation: moveSquare 8s linear infinite; /* 8s cycle */
+  animation-play-state: paused; /* Initially paused */
+}
+
+/* Keyframes for movement and color change */
+@keyframes moveSquare {
+  0% {
+    top: 0;
+    left: 0;
+    background-color: orange; /* Top-left */
+  }
+  25% {
+    top: 0;
+    left: calc(100% - 50px); /* Top-right */
+    background-color: green;
+  }
+  50% {
+    top: calc(100% - 50px); /* Bottom-right */
+    left: calc(100% - 50px);
+    background-color: blue;
+  }
+  75% {
+    top: calc(100% - 50px); /* Bottom-left */
+    left: 0;
+    background-color: yellow;
+  }
+  100% {
+    top: 0;
+    left: 0;
+    background-color: orange; /* Back to Top-left */
+  }
+}

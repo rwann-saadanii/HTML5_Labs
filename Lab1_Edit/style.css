@@ -1,0 +1,179 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Hero Section */
+.hero {
+    background: url('stunning-brown-wooden-office-desk-a1yivbaxal92jim2.jpg') center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 600px;
+    background-color: rgb(199, 187, 174);
+    padding: 20px;
+    border-radius: 4%;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.hero .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #ad784c;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.hero .btn:hover {
+    background: #e9bf9d;
+}
+
+/* Activities Section */
+.activities {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.activities h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+hr {
+    width: 20%;
+    margin: auto;
+    margin-bottom: 3%;
+}
+
+.activity-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Space between activities */
+}
+
+.activity {
+    flex: 1 1 calc(30% - 20px); /* Each activity takes 30% of the row with spacing */
+    max-width: 30%;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.activity img {
+    width: 100%;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+}
+
+.activity:hover {
+    background-color: #f0f0f0;
+    border-color: rgb(138, 48, 15);
+}
+
+.activity p {
+    font-size: 1rem;
+}
+
+/* Last Section Styling */
+.last-section {
+    padding: 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.image-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.image-row img {
+    flex: 1 1 calc(30% - 20px); /* Each image takes 30% of the row with spacing */
+    max-width: 300px;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.image-row img:hover {
+    opacity: 0.8;
+}
+
+.last-section p {
+    font-size: 1rem;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+    .hero-content {
+        margin: auto;
+    }
+
+    .activity-container {
+        gap: 15px;
+    }
+
+    .activity {
+        flex: 1 1 calc(45% - 15px); /* Adjust activities to 45% on medium screens */
+    }
+
+    .image-row img {
+        flex: 1 1 calc(45% - 15px); /* Adjust images to 45% on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content {
+        width: 90%;
+    }
+
+    .activity-container {
+        gap: 10px;
+    }
+
+    .activity {
+        flex: 1 1 100%; /* Full width for activities */
+    }
+
+    .image-row img {
+        flex: 1 1 100%; /* Full width for images */
+    }
+
+    .last-section p {
+        font-size: 0.9rem;
+    }
+}

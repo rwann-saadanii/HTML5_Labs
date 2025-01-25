@@ -1,0 +1,181 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Hero Section */
+.hero {
+    background: url('stunning-brown-wooden-office-desk-a1yivbaxal92jim2.jpg') center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    height: 100vh;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 600px;
+    /* background-color: rgb(199, 187, 174); */
+    position: relative;
+    top: 200px;
+    right: -350px;
+    border-radius: 4%;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.hero .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #ad784c;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.hero .btn:hover {
+    background: #e9bf9d;
+}
+
+/* Activities Section */
+.activities {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.activities h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+hr {
+    width: 20%;
+    margin: auto;
+    margin-bottom: 3%;
+}
+
+.activity {
+    width: 30%; /* Set each item to take up 30% of the row */
+    background-color: #f9f9f9;
+    margin-bottom: 20px; /* Space between rows */
+    padding: 10px;
+    border: 2px solid #ddd; /* Add a simple border */
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.activity img {
+    width: 100%;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    display: block;
+    margin: 0 auto;
+}
+
+.activity:hover {
+    background-color: #f0f0f0; /* Change background color on hover */
+    border-color: rgb(138, 48, 15); /* Change border color of the activity */
+}
+
+.activity p {
+    font-size: 1rem;
+}
+
+/* Last Section Styling */
+.last-section {
+    padding: 70px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.image-row {
+    margin-bottom: 20px;
+    margin-left: 150px;
+}
+
+.image-row img {
+    float: left; /* Align images in a row */
+    width: 30%; /* Set width as 30% of the container */
+    /* margin: 0 1.5%; Add spacing between images */
+    max-width: 300px; /* Limit the maximum width */
+     
+    box-sizing: border-box;
+}
+
+.image-row img:hover {
+    /* display: none; */
+    opacity: 0.8; /* Hover effect by changing opacity */
+    /* display: block; */
+}
+
+.last-section p {
+    font-size: 1rem;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+    .hero-content {
+        right: 0;
+        margin: auto;
+    }
+
+    .activity {
+        width: 45%; /* Adjust activities to 45% on medium screens */
+    }
+
+    .image-row {
+        margin-left: 50px;
+    }
+
+    .image-row img {
+        width: 45%;
+        float: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content {
+        top: 100px;
+        width: 90%;
+        margin: auto;
+    }
+
+    .activity {
+        width: 100%; /* Full width for activities */
+        margin: 10px auto;
+    }
+
+    .image-row {
+        margin: auto;
+    }
+
+    .image-row img {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .last-section p {
+        font-size: 0.9rem; /* Slightly smaller text */
+    }
+}
