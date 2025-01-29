@@ -1,0 +1,18 @@
+.h2 {
+ color: red;
+ text-align: center;
+ margin: 3px;
+ padding: 10px;
+}
+ .accordion-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50vh; /* Adjust as needed */
+  }
+  
+  .accordion {
+      width: 50%; /* Medium width */
+      max-width: 600px; /* Limit max width */
+      min-height: 300px; /* Medium height */
+  }

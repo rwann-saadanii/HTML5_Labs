@@ -1,0 +1,199 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: white;
+}
+
+.container {
+    margin-top: 20px;
+    background-color: rgb(23, 116, 145);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* flex-direction: column; */
+    border: 2px solid palevioletred;
+    box-shadow: -1px 1px 20px rgb(47, 232, 253);
+    width: 800px;
+    height: 600px;
+    border-radius: 3%;
+    padding: 30px;
+    margin: auto;
+    min-height: 70vh;
+    transition: transform 2s ;
+
+
+}
+
+.innercontainer1 {
+    width: 400px;
+    min-height:10vh;
+    background: linear-gradient(89.91deg, #7a957ae6 -0.76%, #3c154ee6 99.93%);
+    box-shadow: inset 5px 5px 15px rgba(195, 164, 164, 0.2), 
+                inset -5px -5px 15px rgba(212, 155, 155, 0.8);
+
+    border: 2px solid rgb(13, 6, 8);
+    padding: 20px;
+    overflow: auto;
+    column-count: 3;
+    column-gap: 20px;
+    column-rule: 2px solid rgb(153, 170, 158);
+    border-radius: 20px;
+    
+    
+
+}
+.innercontainer1 p:hover {
+ /* background-color: #adad3d; */
+ transform: scale(1.05);
+ transition: transform 0.6s ease;
+ 
+}
+
+.innercontainer2 {
+ 
+    width: 300px;
+    min-height:30vh;
+    border: 2px solid rgb(13, 6, 8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: inset 5px 5px 15px rgba(86, 68, 136, 0.2), 
+                inset -5px -5px 15px rgba(155, 192, 212, 0.8);
+
+    /* box-shadow: -1px 1px 20px rgb(134, 72, 191); */
+
+}
+.innercontainer2 img{
+    width: 20%;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+    border: 2px solid rgb(90, 26, 170);
+    /* padding: 20px; */
+    /* border-radius: 20px; */
+    transition: transform 0.9s ease;
+    box-shadow: -1px 1px 20px rgb(47, 232, 253);
+   
+}
+.container:hover{
+    transform: scale(1.2);
+    box-shadow: -1px 1px 20px rgb(138, 39, 51);
+    transform: skew(15deg);    
+    
+    /* .innercontainer1{
+        width: 300px;
+        height: 300px;
+    }
+    .innercontainer2{
+        width: 300px;
+        height: 300px;
+    } */
+}
+.innercontainer1:hover,
+.innercontainer2:hover{
+    transform: scale(1.2);
+    transition: transform 2s ease;
+    box-shadow: -1px 1px 20px rgb(138, 39, 51);
+
+}
+.container img:hover {
+    transform: scale(1.8)rotate(360deg);
+    box-shadow: 5px 5px 10px rgb(156, 97, 58);
+}
+.container:active{
+    transform: skew(0deg);
+    transform: scale(0.5) translate(-10%, 20%);
+}
+.container img:active {
+    transform: scale(7);
+
+}
+mark {
+    background-color: rgb(216, 197, 197);
+}
+mark:hover {
+    text-decoration: underline;
+    /* color: #adad3d; */
+
+}
+
+@media (max-width: 768px) {
+    .container img {
+        transform: scale(0.5)rotate(45deg);
+        
+    }
+    .container img:active{
+        border: 6px dotted yellow;
+    }
+    .innercontainer1:hover,
+    .innercontainer2:hover{
+    /* transform: scale(1.2); */
+    transition: none;
+    box-shadow: -1px 1px 20px rgb(138, 39, 51);}
+
+    .container:hover{
+        /* transform: scale(1.2); */
+        /* box-shadow: -1px 1px 20px rgb(138, 39, 51); */
+        transform: skew(0);    
+        
+    }
+
+}
+
+@media (max-width: 1200px) {
+    .container {
+        width: 90%;
+        height: auto;
+        flex-direction: column;
+    }
+
+    .innercontainer1,
+    .innercontainer2 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .innercontainer2 img {
+        width: 30%;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        height: auto;
+        padding: 15px;
+    }
+
+    .innercontainer1,
+    .innercontainer2 {
+        width: 100%;
+    }
+
+    .innercontainer2 img {
+        width: 40%;
+    }
+
+    .container img:hover {
+        transform: scale(1) rotate(180deg);
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .innercontainer1,
+    .innercontainer2 {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .innercontainer2 img {
+        width: 50%;
+    }
+}
